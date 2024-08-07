@@ -13,9 +13,6 @@ ad.user_cache_dir = lambda *args: CACHE_DIR
 Path(CACHE_DIR).mkdir(exist_ok=True)
 import yfinance as yf
 
-# Set page configuration for full width
-# set_page_config(layout="wide")
-
 today = date.today()
 comm_dict2 = {'EURUSD=X':'USD_EUR','CNY=X':'USD/CNY','CL=F':'Crude_Oil','GC=F':'Gold','^IXIC':'NASDAQ',
              '^GSPC':'SP_500','^TNX':'10_YB','HG=F':'Copper','GBPUSD=X':'USD_GBP','JPY=X':'USD_JPY',
