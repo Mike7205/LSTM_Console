@@ -22,7 +22,6 @@ comm_dict2 = {'EURUSD=X':'USD_EUR','CNY=X':'USD/CNY','CL=F':'Crude_Oil','GC=F':'
 
 st.title('LSTM Model - main console')
 
-@st.cache_data
 def model_f(past):
     global final_df
     df_list = []
@@ -44,8 +43,7 @@ def model_f(past):
         final_df = pd.concat(df_list, axis=1)
         final_df = final_df.T.drop_duplicates().T
         final_df.to_excel('Nm_data.xlsx')
-
-@st.cache_data        
+        
 def rr_eur_pln():
     eur_df = pd.read_excel('Nm_data.xlsx')
     final_PLN_EUR = eur_df['EUR/PLN']
@@ -57,8 +55,7 @@ def rr_eur_pln():
     rr_df = pd.concat([final_PLN_EUR, rr_d], axis=1)
     rr_df.dropna()
     rr_df.to_excel('Nm_rr_eur.xlsx')
-
-@st.cache_data    
+   
 def rr_usd_pln():
     usd_df = pd.read_excel('Nm_data.xlsx')
     final_PLN_USD = usd_df['PLN/USD']
@@ -95,7 +92,6 @@ n_rr_usd = new_rr_usd[['PLN/USD','EUR/PLN','DJI30', 'USD_EUR', 'USD/CNY','Crude_
 n_rr_usd.fillna(0)
 n_rr_usd.to_excel('N_rr_usd.xlsx')
 
-@st.cache_data
 def LSTM_Model(data_set):
     set_1 = data_set.fillna(0)
     scaler=MinMaxScaler(feature_range=(0,1))
