@@ -168,7 +168,7 @@ with col1:
         _forecast_eur = pd.read_excel('forecast.xlsx')
         _forecast_eur.to_excel('forecast_eur.xlsx')
         f_eur = pd.read_excel('forecast_eur.xlsx')
-        st.subheader(f'EUR/PLN prediction for today is {list(f_eur[0])}', divider="blue")  
+        st.subheader(f'EUR/PLN prediction for tomorrow is {list(f_eur[0])}', divider="blue")  
   
 with col2:
     if st.button('USD/PLN Data set',key = "<char4>"):
@@ -176,4 +176,4 @@ with col2:
         _forecast_usd = pd.read_excel('forecast.xlsx')
         _forecast_usd.to_excel('forecast_usd.xlsx')
         f_usd = pd.read_excel('forecast_usd.xlsx')
-        st.subheader(f'USD/PLN prediction for today is {list(f_usd[0])}', divider="blue")
+        st.subheader(f'USD/PLN prediction for tomorrow is {list(f_usd[0])}', divider="blue")
