@@ -14,7 +14,7 @@ Path(CACHE_DIR).mkdir(exist_ok=True)
 import yfinance as yf
 
 # Set page configuration for full width
-set_page_config(layout="wide")
+# set_page_config(layout="wide")
 
 today = date.today()
 comm_dict2 = {'EURUSD=X':'USD_EUR','CNY=X':'USD/CNY','CL=F':'Crude_Oil','GC=F':'Gold','^IXIC':'NASDAQ',
