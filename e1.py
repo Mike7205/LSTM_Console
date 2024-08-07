@@ -173,7 +173,7 @@ with col1:
   
 with col2:
     if st.button('USD/PLN Data set',key = "<char3>"):
-        yees4 = LSTM_Model(n_rr_usd))
+        yees4 = LSTM_Model(n_rr_usd)
         _forecast_usd = pd.read_excel('forecast.xlsx')
         _forecast_usd.to_excel('forecast_usd.xlsx')
         f_usd = pd.read_excel('forecast_usd.xlsx')
