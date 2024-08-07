@@ -165,16 +165,16 @@ col1, col2 = st.columns(2)
 
 with col1:
     if st.button('EUR/PLN Data set',key = "<char3>"):
-      yees3 = LSTM_Model(n_rr_eur))
-      _forecast_eur = pd.read_excel('forecast.xlsx')
-      _forecast_eur.to_excel('forecast_eur.xlsx')
-      f_eur = pd.read_excel('forecast_eur.xlsx')
-      st.subheader(f'EUR/PLN prediction for today is {list(f_eur[0])}', divider="blue")  
+        yees3 = LSTM_Model(n_rr_eur)
+        _forecast_eur = pd.read_excel('forecast.xlsx')
+        _forecast_eur.to_excel('forecast_eur.xlsx')
+        f_eur = pd.read_excel('forecast_eur.xlsx')
+        st.subheader(f'EUR/PLN prediction for today is {list(f_eur[0])}', divider="blue")  
   
 with col2:
     if st.button('USD/PLN Data set',key = "<char3>"):
-    yees4 = LSTM_Model(n_rr_usd))
-    _forecast_usd = pd.read_excel('forecast.xlsx')
-    _forecast_usd.to_excel('forecast_usd.xlsx')
-    f_usd = pd.read_excel('forecast_usd.xlsx')
-    st.subheader(f'USD/PLN prediction for today is {list(f_usd[0])}', divider="blue")
+        yees4 = LSTM_Model(n_rr_usd))
+        _forecast_usd = pd.read_excel('forecast.xlsx')
+        _forecast_usd.to_excel('forecast_usd.xlsx')
+        f_usd = pd.read_excel('forecast_usd.xlsx')
+        st.subheader(f'USD/PLN prediction for today is {list(f_usd[0])}', divider="blue")
