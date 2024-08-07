@@ -146,7 +146,9 @@ if st.button('Data load',key = "<char1>"):
     yees = model_f(3001)    
     final_df = pd.read_excel('Nm_data.xlsx')
     st.subheader('Current data sample', divider="red")
-    st.dataframe(final_df[['Date','EUR/PLN','PLN/USD','Crude_Oil']][-3:]) 
+    sample3 = final_df[['Date','EUR/PLN','PLN/USD','Crude_Oil']][-3:]
+    sample3.to_excel('sample3.xlsx')
+    st.dataframe(sample3) 
     
 if st.button('Prepare Data for LSTM',key = "<char2>"):
     yees1 = rr_eur_pln()   
