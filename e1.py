@@ -92,6 +92,7 @@ n_rr_usd = new_rr_usd[['PLN/USD','EUR/PLN','DJI30', 'USD_EUR', 'USD/CNY','Crude_
 n_rr_usd.fillna(0)
 n_rr_usd.to_excel('N_rr_usd.xlsx')
 
+@st.cache_resource
 def LSTM_Model(data_set):
     set_1 = data_set.fillna(0)
     scaler=MinMaxScaler(feature_range=(0,1))
