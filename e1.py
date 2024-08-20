@@ -94,6 +94,7 @@ n_rr_usd.to_excel('N_rr_usd.xlsx')
 
 @st.cache_resource
 def LSTM_Model(data_set):
+    st.session_state
     set_1 = data_set.fillna(0)
     scaler=MinMaxScaler(feature_range=(0,1))
     set_1_scaled = scaler.fit_transform(np.array(set_1))
